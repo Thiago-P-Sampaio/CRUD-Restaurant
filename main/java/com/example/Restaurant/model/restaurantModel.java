@@ -3,6 +3,8 @@ package com.example.Restaurant.model;
 import java.util.UUID;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -14,7 +16,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class restaurantModel {
 
-	@Id
+	
+	
+	
+	@Id @GeneratedValue (strategy = GenerationType.UUID)
 	private UUID Id;
 	private String nome;
 	private String desc;
